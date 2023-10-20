@@ -69,6 +69,8 @@ export default function ChatContainer({ currentChat, socket }) {
     scrollRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
 
+  console.log("current chat1"+currentChat.username);
+
   return (
     <Container>
       <div className="chat-header">
