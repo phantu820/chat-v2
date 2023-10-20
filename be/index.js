@@ -38,6 +38,7 @@ const io = socket(server, {
 global.onlineUsers = new Map();
 io.on("connection", (socket) => {
   global.chatSocket = socket;
+  
   socket.on("add-user", (userId) => {
     onlineUsers.set(userId, socket.id);
   });

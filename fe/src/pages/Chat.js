@@ -37,6 +37,7 @@ export default function Chat() {
       if (currentUser.isAvatarImageSet) {
         const data = await axios.get(`${allUsersRoute}/${currentUser._id}`);
         setContacts(data.data);
+        console.log("contact: "+data.data);
       } else {
         navigate("/setAvatar");
       }
@@ -44,6 +45,7 @@ export default function Chat() {
   }, [currentUser]);
   const handleChatChange = (chat) => {
     setCurrentChat(chat);
+    console.log("currentChat"+ currentChat);
   };
   return (
     <>
